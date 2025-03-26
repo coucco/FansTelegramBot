@@ -1,70 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FANS</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/shop.css">
-    <link rel="stylesheet" href="styles/profile.css">
-    <link rel="stylesheet" href="styles/search.css">
-    <link rel="stylesheet" href="styles/rating.css">
-
-    <div id="viewport"></div>
-    <div id="viewport-params-size"></div>
-    <div id="viewport-params-expand"></div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя Mini App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div class="app">
-        <!-- Контент страниц -->
-        <div id="shop-page" class="page active">
-            <h1>Магазин</h1>
-            <div class="items-grid" id="shop-items">
-                <!-- Товары подгружаются через JS -->
-            </div>
-        </div>
-
-        <div id="profile-page" class="page">
-            <div class="profile-header">
-                <img id="user-avatar" src="" alt="Аватар">
-                <h2 id="user-name"></h2>
-                <p>Баланс: <span id="user-balance">0</span> монет</p>
-            </div>
-            <div class="fans-list">
-                <h3>Ваши фанаты</h3>
-                <div id="user-fans"></div>
-            </div>
-        </div>
-
-        <div id="search-page" class="page">
-            <h1>Поиск фанатов</h1>
-            <div class="search-results" id="available-fans">
-                <!-- Список фанатов -->
-            </div>
-        </div>
-
-        <div id="rating-page" class="page">
-            <h1>Рейтинг</h1>
-            <div class="top-list" id="top-users">
-                <!-- Топ игроков -->
-            </div>
-        </div>
+  <div id="app">
+    <!-- Контент будет меняться при навигации -->
+    <div class="page-content" id="page-content">
+      <div class="page active" id="home-page">
+        <h1>Главная</h1>
+        <p>Добро пожаловать в наше приложение!</p>
+      </div>
+      
+      <div class="page" id="catalog-page">
+        <h1>Каталог</h1>
+        <div class="product-grid"></div>
+      </div>
+      
+      <div class="page" id="cart-page">
+        <h1>Корзина</h1>
+        <div class="cart-items"></div>
+      </div>
+      
+      <div class="page" id="profile-page">
+        <h1>Профиль</h1>
+        <div class="user-info"></div>
+      </div>
     </div>
-
+    
     <!-- Нижняя панель навигации -->
-    <div class="bottom-nav">
-        <button class="nav-btn active" data-page="shop-page">🛒 Магазин</button>
-        <button class="nav-btn" data-page="profile-page">👤 Профиль</button>
-        <button class="nav-btn" data-page="search-page">🔍 Поиск</button>
-        <button class="nav-btn" data-page="rating-page">🏆 Рейтинг</button>
-    </div>
-
-    <script src="script.js"></script>
-
-    <!-- Eruda is console for mobile browsers -->
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-    <script>eruda.init();</script>
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-page="home-page">
+        <i class="fas fa-home"></i>
+        <span>Главная</span>
+      </button>
+      <button class="nav-btn" data-page="catalog-page">
+        <i class="fas fa-search"></i>
+        <span>Каталог</span>
+      </button>
+      <button class="nav-btn" data-page="cart-page">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Корзина</span>
+      </button>
+      <button class="nav-btn" data-page="profile-page">
+        <i class="fas fa-user"></i>
+        <span>Профиль</span>
+      </button>
+    </nav>
+  </div>
+  
+  <script src="app.js"></script>
 </body>
 </html>
