@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Economy</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <div class="content" id="content">
+            <!-- Контент будет динамически меняться -->
+        </div>
+        
+        <div class="navbar">
+            <button class="nav-btn active" data-page="shop">
+                <i class="fas fa-store"></i>
+                <span>Магазин</span>
+            </button>
+            <button class="nav-btn" data-page="profile">
+                <i class="fas fa-user"></i>
+                <span>Профиль</span>
+            </button>
+            <button class="nav-btn" data-page="search">
+                <i class="fas fa-search"></i>
+                <span>Поиск</span>
+            </button>
+            <button class="nav-btn" data-page="leaderboard">
+                <i class="fas fa-trophy"></i>
+                <span>Рейтинг</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
