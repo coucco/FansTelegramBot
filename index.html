@@ -160,3 +160,79 @@
     <script>eruda.init();</script>
 </body>
 </html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANS</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="styles/rating.css">
+
+    <div id="viewport"></div>
+    <div id="viewport-params-size"></div>
+    <div id="viewport-params-expand"></div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+</head>
+<body>
+    <div class="app">
+        <!-- Контент страниц -->
+        <div id="shop-page" class="page active">
+            <h1>Магазин</h1>
+            <div class="items-grid" id="shop-items">
+                <!-- Товары подгружаются через JS -->
+            </div>
+        </div>
+
+        <div id="profile-page" class="page">
+            <div class="profile-header">
+                <img id="user-avatar" src="" alt="Аватар">
+                <h2 id="user-name"></h2>
+                <p>Баланс: <span id="user-balance">0</span> монет</p>
+            </div>
+            <div class="fans-list">
+                <h3>Ваши фанаты</h3>
+                <div id="user-fans"></div>
+            </div>
+        </div>
+
+        <div id="search-page" class="page">
+            <h1>Поиск фанатов</h1>
+            <div class="search-results" id="available-fans">
+                <!-- Список фанатов -->
+            </div>
+        </div>
+
+        <div id="rating-page" class="page">
+            <h1>Рейтинг</h1>
+            <div class="top-list" id="top-users">
+                <!-- Топ игроков -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижняя панель навигации -->
+    <div class="bottom-nav">
+        <button class="nav-btn active" data-page="shop-page">🛒 Магазин</button>
+        <button class="nav-btn" data-page="profile-page">👤 Профиль</button>
+        <button class="nav-btn" data-page="search-page">🔍 Поиск</button>
+        <button class="nav-btn" data-page="rating-page">🏆 Рейтинг</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Eruda is console for mobile browsers -->
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+</body>
+</html>
