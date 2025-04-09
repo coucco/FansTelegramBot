@@ -1,3 +1,5 @@
+const API_BASE_URL = 'https://fanstelegrambot-production.up.railway.app';
+
 // Состояние приложения
 state = {
     currentPage: 'profile',
@@ -111,3 +113,5 @@ function renderFansPage() {
 function renderRatingPage() {
     return `<div class="page"><h1>Рейтинг</h1><p>Топ самых популярных людей:</p></div>`;
 }
+
+
